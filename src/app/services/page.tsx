@@ -1,7 +1,27 @@
-import React from 'react';
-import { Map, Compass, Calendar, ShieldAlert, DollarSign, Plane, Home, CreditCard, FileText, GraduationCap, Briefcase, CheckCircle, Phone, Activity, Clock, Car, Heart } from 'lucide-react';
+import React from "react";
+import {
+  Map,
+  Compass,
+  Calendar,
+  ShieldAlert,
+  DollarSign,
+  Plane,
+  Home,
+  CreditCard,
+  FileText,
+  GraduationCap,
+  Briefcase,
+  CheckCircle,
+  TramFront,
+  Activity,
+  Clock,
+  Car,
+  Heart,
+} from "lucide-react";
+import Image from "next/image";
 const Services = () => {
-  return <div className="w-full bg-white">
+  return (
+    <div className="w-full bg-white">
       <div className="bg-blue-600 text-white py-16">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl font-bold mb-4">Our Services</h1>
@@ -17,9 +37,9 @@ const Services = () => {
           <div className="mb-12 text-center">
             <h2 className="text-3xl font-bold mb-4">Travel Guide Services</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Expert guidance to help you make the most of your travel
+              {`Expert guidance to help you make the most of your travel
               experiences, whether you're visiting for a short trip or exploring
-              your new home.
+              your new home.`}
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -38,7 +58,7 @@ const Services = () => {
             </div>
             <div className="bg-white rounded-lg shadow-md p-6 border-t-4 border-blue-500">
               <div className="bg-blue-100 p-3 rounded-full inline-flex mb-4">
-                <div className="h-6 w-6 text-blue-600" />
+                <TramFront className="h-6 w-6 text-blue-600" />
               </div>
               <h3 className="text-xl font-semibold mb-3">
                 Local Transportation Tips
@@ -223,8 +243,16 @@ const Services = () => {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-            <div className="bg-white rounded-lg shadow-md overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="In-person consultation" className="w-full h-64 object-cover" />
+            <div className="rounded-lg shadow-md overflow-hidden">
+              <div className="relative w-full h-64">
+                <Image
+                  fill
+                  src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                  alt="In-person consultation"
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                />
+              </div>
               <div className="p-6">
                 <h3 className="text-xl font-semibold mb-3">
                   In-Person Consultations
@@ -250,7 +278,15 @@ const Services = () => {
               </div>
             </div>
             <div className="bg-white rounded-lg shadow-md overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Online consultation" className="w-full h-64 object-cover" />
+              <div className="relative w-full h-64">
+                <Image
+                  fill
+                  src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                  alt="In-person consultation"
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                />
+              </div>
               <div className="p-6">
                 <h3 className="text-xl font-semibold mb-3">
                   Online Consultations
@@ -433,6 +469,7 @@ const Services = () => {
           </div>
         </div>
       </section>
-    </div>;
+    </div>
+  );
 };
 export default Services;
